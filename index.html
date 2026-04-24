@@ -605,7 +605,11 @@ body:not(.zh) .en-unit{display:inline!important}
 }
 
 /* Student voices — natural heights */
-.voices{margin-top:70px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.voices{margin-top:70px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.voices-col{display:flex;flex-direction:column}
+.voices-col .col-body{flex:1;display:flex;flex-direction:column;gap:18px}
+.voices-col .poster{flex:1}
+.voices-col .essay{flex:1;min-height:0}
 @media (max-width:800px){.voices{grid-template-columns:1fr}}
 .voices-col h3{margin-bottom:20px;color:var(--coffee)}
 .voices-col .col-body{display:flex;flex-direction:column;gap:18px}
@@ -953,7 +957,7 @@ body.zh .stat-hero-big{font-size:1.2rem;}
     <div class="carousel-head">
       <div>
         <h3 data-en="What teachers told us" data-zh="老师们怎么说">What teachers told us</h3>
-        <p style="color:var(--brown);margin:0" data-en="Four candid reactions from our interviews." data-zh="采访中，四位老师的真实反应。">Four candid reactions from our interviews.</p>
+        <p style="color:var(--brown);margin:0" data-en="Five candid reactions from our interviews." data-zh="采访中，五位老师的真实反应。">Five candid reactions from our interviews.</p>
       </div>
       <div class="carousel-ctrl">
         <button class="carousel-btn" id="prevQ">←</button>
@@ -962,31 +966,38 @@ body.zh .stat-hero-big{font-size:1.2rem;}
     </div>
     <div class="carousel" id="carousel">
       <div class="quote-card">
-        <p class="quote-text" data-en="I had no idea coffee grounds could be reused — this is eye-opening!" data-zh="我完全不知道咖啡渣还能再利用——这真的让我大开眼界！">I had no idea coffee grounds could be reused — this is eye-opening!</p>
+        <p class="quote-text" data-en="Honestly, I just care about the coffee. The grounds? I see them as waste — I've never really thought about using them." data-zh="说实话，我只在乎咖啡本身。咖啡渣嘛，我一直当废料处理，从来没想过还能拿来干什么。">Honestly, I just care about the coffee. The grounds? I see them as waste — I've never really thought about using them.</p>
         <div class="quote-author">
-          <div class="quote-avatar">A</div>
-          <div class="quote-meta"><span data-en="Teacher A" data-zh="A老师">Teacher A</span><small data-en="Humanities · Grade 7" data-zh="人文学科 · 七年级">Humanities · Grade 7</small></div>
+          <div class="quote-avatar">F</div>
+          <div class="quote-meta"><span data-en="Mr. F" data-zh="F 老师">Mr. F</span><small data-en="Barista at the Café" data-zh="咖啡师">Barista at the Café</small></div>
         </div>
       </div>
       <div class="quote-card">
-        <p class="quote-text" data-en="We just throw them away. I never thought twice about it." data-zh="我们一直直接扔掉。从没想过这有什么问题。">We just throw them away. I never thought twice about it.</p>
+        <p class="quote-text" data-en="I have a feeling coffee grounds could be useful for something… but I honestly have no idea how to actually use them." data-zh="我总觉得咖啡渣应该是有用的，但说实话，我真的不知道怎么用。">I have a feeling coffee grounds could be useful for something… but I honestly have no idea how to actually use them.</p>
         <div class="quote-author">
-          <div class="quote-avatar">B</div>
-          <div class="quote-meta"><span data-en="Teacher B" data-zh="B老师">Teacher B</span><small data-en="Science Dept." data-zh="理科组">Science Dept.</small></div>
+          <div class="quote-avatar">L</div>
+          <div class="quote-meta"><span data-en="Ms. L" data-zh="L 老师">Ms. L</span><small data-en="Drama Teacher" data-zh="戏剧老师">Drama Teacher</small></div>
         </div>
       </div>
       <div class="quote-card">
-        <p class="quote-text" data-en="I'm surprised there's so much waste from just one cup." data-zh="一杯咖啡就能产生这么多废渣，真没想到。">I'm surprised there's so much waste from just one cup.</p>
+        <p class="quote-text" data-en="I know coffee grounds can be useful, but I've never actually saved any myself." data-zh="我知道咖啡渣是有用的，但我自己从来没收集过。">I know coffee grounds can be useful, but I've never actually saved any myself.</p>
         <div class="quote-author">
-          <div class="quote-avatar">C</div>
-          <div class="quote-meta"><span data-en="Teacher C" data-zh="C老师">Teacher C</span><small data-en="Language Dept." data-zh="语言学科组">Language Dept.</small></div>
+          <div class="quote-avatar">S</div>
+          <div class="quote-meta"><span data-en="Mr. S" data-zh="S 老师">Mr. S</span><small data-en="PE Teacher" data-zh="体育老师">PE Teacher</small></div>
         </div>
       </div>
       <div class="quote-card">
-        <p class="quote-text" data-en="I drink at least two cups a day — I never considered what happened to the grounds afterwards." data-zh="我每天至少喝两杯——但从来没想过那些咖啡渣最后去了哪里。">I drink at least two cups a day — I never considered what happened to the grounds afterwards.</p>
+        <p class="quote-text" data-en="To be honest, I just throw them away. I don't really think about it." data-zh="说实话，我都是直接扔掉的，从来没多想过。">To be honest, I just throw them away. I don't really think about it.</p>
         <div class="quote-author">
-          <div class="quote-avatar">D</div>
-          <div class="quote-meta"><span data-en="Teacher D" data-zh="D老师">Teacher D</span><small data-en="Math Dept." data-zh="数学组">Math Dept.</small></div>
+          <div class="quote-avatar">L</div>
+          <div class="quote-meta"><span data-en="Ms. L" data-zh="L 老师">Ms. L</span><small data-en="History Teacher" data-zh="历史老师">History Teacher</small></div>
+        </div>
+      </div>
+      <div class="quote-card">
+        <p class="quote-text" data-en="I think it's a real problem — so many coffee grounds get thrown out, and that's not good for the environment." data-zh="我觉得这其实是个问题——那么多咖啡渣被扔掉，对环境一点都不好。">I think it's a real problem — so many coffee grounds get thrown out, and that's not good for the environment.</p>
+        <div class="quote-author">
+          <div class="quote-avatar">F</div>
+          <div class="quote-meta"><span data-en="Ms. F" data-zh="F 老师">Ms. F</span><small data-en="Music Teacher" data-zh="音乐老师">Music Teacher</small></div>
         </div>
       </div>
     </div>
@@ -1204,24 +1215,26 @@ body.zh .stat-hero-big{font-size:1.2rem;}
 
     <div class="voices">
       <div class="voices-col">
-        <h3 data-en="Student posters" data-zh="学生海报">Student posters</h3>
+        <h3 data-en="Student poster" data-zh="学生海报">Student poster</h3>
         <div class="col-body">
           <!-- PHOTO_SLOT: poster-1 -->
           <div class="poster"><img src="photos/poster_1.jpg" alt="Poster 1"></div>
-          <!-- PHOTO_SLOT: poster-2 -->
-          <div class="poster"><img src="photos/poster_2.jpg" alt="Poster 2"></div>
         </div>
       </div>
       <div class="voices-col">
         <h3 data-en="Student voices" data-zh="学生心声">Student voices</h3>
         <div class="col-body">
           <div class="essay">
-            <p class="essay-text" data-en="Before this project, I thought recycling meant putting bottles in a blue bin. I never realised something like coffee grounds — something we see every single day — could become a candle that sits on my mum's desk." data-zh="做这个项目之前，我以为环保就是把瓶子扔进蓝色垃圾桶。我从没想到，咖啡渣——每天都会见到的东西——竟然可以变成一根摆在我妈书桌上的蜡烛。">Before this project, I thought recycling meant putting bottles in a blue bin. I never realised something like coffee grounds — something we see every single day — could become a candle that sits on my mum's desk.</p>
-            <div class="essay-name"><span data-en="Student, Group 1" data-zh="同学，第1组">Student, Group 1</span><small data-en="Scent Tags Team" data-zh="咖啡香牌组">Scent Tags Team</small></div>
+            <p class="essay-text" data-en="Before this project, I never used coffee grounds for anything. Now, I know we can upcycle them into something new." data-zh="在做这个项目之前，我从来没用过咖啡渣。现在我知道，它们其实可以被再利用，变成新的东西。">Before this project, I never used coffee grounds for anything. Now, I know we can upcycle them into something new.</p>
+            <div class="essay-name"><span>Vicky</span><small data-en="Grade 7 Student" data-zh="七年级同学">Grade 7 Student</small></div>
           </div>
           <div class="essay">
-            <p class="essay-text" data-en='The hardest part wasn&apos;t the making. It was the interview. I was so nervous talking to a teacher I didn&apos;t know. But when she said "I never thought twice about it" — I realised this project mattered.' data-zh="最难的不是制作，而是采访。跟一个不熟悉的老师说话，我紧张极了。但当她说「我从来没有多想过」——我意识到，这个项目真的很重要。">The hardest part wasn't the making. It was the interview. I was so nervous talking to a teacher I didn't know. But when she said "I never thought twice about it" — I realised this project mattered.</p>
-            <div class="essay-name"><span data-en="Student, Group 3" data-zh="同学，第3组">Student, Group 3</span><small data-en="Coffee Clay Team" data-zh="咖啡黏土组">Coffee Clay Team</small></div>
+            <p class="essay-text" data-en="I never imagined that coffee grounds could turn into the phone stand sitting on Mr. Cao's desk." data-zh="我从来没想过，咖啡渣居然可以变成曹老师桌上的那个手机支架。">I never imagined that coffee grounds could turn into the phone stand sitting on Mr. Cao's desk.</p>
+            <div class="essay-name"><span>Hank</span><small data-en="Grade 7 Student" data-zh="七年级同学">Grade 7 Student</small></div>
+          </div>
+          <div class="essay">
+            <p class="essay-text" data-en="It's pretty amazing — just a little bit of coffee powder can be turned into so many surprising things." data-zh="真的挺神奇的——就那么一点点咖啡粉，居然可以做出那么多意想不到的东西。">It's pretty amazing — just a little bit of coffee powder can be turned into so many surprising things.</p>
+            <div class="essay-name"><span>Claire</span><small data-en="Grade 7 Student" data-zh="七年级同学">Grade 7 Student</small></div>
           </div>
         </div>
       </div>
